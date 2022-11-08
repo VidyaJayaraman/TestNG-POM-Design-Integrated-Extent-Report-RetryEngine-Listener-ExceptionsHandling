@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="classes">
+<listeners>
+		<listener
+			class-name="com.testleaf.base.RetryEngine"></listener>
+	</listeners><!-- Add the retryclass packagename.classname inside listeners tag at suite level  -->
+  <test thread-count="5" name="Login_CreateLead_EditLead" verbose="2">
+    <classes>
+      <class name="com.testleaf.testcases.Test_001"/>
+      <class name="com.testleaf.testcases.Test_002"/>
+      <class name="com.testleaf.testcases.Test_003"/>
+      </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
